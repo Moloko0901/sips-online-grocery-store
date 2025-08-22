@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <title>REGISTER PAGE</title>
+    <link rel ="stylesheet" href ="stylling.css">
+</head>
+<body>
+
+      <header> 
+    
+    <h1> Sips Grocery Store </h1>
+  </header>
+  <!--  Navigation Bar.  -->
+  <nav>
+    <a href = "C:\Users\pc\Desktop\HTML L4\index.html" >Home</a>
+    <a href = "" >Register</a>
+       <a href = "" >About</a>
+       <a href = "" >Service</a>
+       <a href = "" >Contact</a>
+    <a href = "" >Policy</a>
+  </nav>
+  <div id = "Sidebar">
+    <h2> Sidebar </h2>
+    
+    <p>
+ 1. <h3>Store Hours</h3>  
+   <li>Mon-Fri: 8:00 AM - 9:00 PM </li>  
+   <li>Sat-Sun: 9:00 AM - 8:00 PM </li> 
+
+2.<h3><i>Departments</i></h3> 
+   <li>Fresh Produce</li> 
+   <li>Dairy & Eggs</li>
+   <li>Bakery</li> 
+   <li>Meat & Seafood </li>   
+   <li>Pantry Staples</li>
+   <li>Organic & Specialty  </li>
+   
+3. <h3>Weekly Deals</h3>  
+   <p>Buy 1 Get 1 Free: <strong> Apples</strong>   <br>
+   <strong>20% Off All Dairy Products  </strong> <br>
+    Weekend Special: Fresh Salmon
+</p>
+4. <h4>Contact </h4>
+<a href=""> (555) 123-4567  </a> <br>
+<a href="molokoma01@gmail.com"> hello@sipsgrocery.com </a> <br> 
+<a href=""> Address: 123 Market St, Cityville </a>  
+<br>
+5. <h4>Quick Links </h4> 
+
+   <a href="">Recipe Ideas</a> <br>
+   <a href="">Rewards Program</a><br>
+   <a href="">Delivery Options </a>
+   
+</div>
+<div class = "content">
+    <h1> <u><em>Main Content Area</em></u></h1>
+    <h1><u><i><strong>Registration section</strong></i></u></h1>
+
+
+  <form id="customer-registration" class="registration-form" action="/register" method="POST">
+    <h2>Create Your Account</h2>
+    
+    <!-- Personal Info -->
+    <div class="form-group">
+      <label for="full-name">Full Name*</label>
+      <input type="text" id="full-name" name="full_name" required placeholder="John Doe">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required placeholder="your@email.com">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password*</label>
+      <input type="password" id="password" name="password" required 
+            minlength="8" placeholder="At least 8 characters">
+      <small>Include numbers, letters, and symbols.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="confirm-password">Confirm Password*</label>
+      <input type="password" id="confirm-password" name="confirm_password" required>
+    </div>
+
+    <!-- Address (Optional for grocery delivery) -->
+    <div class="form-group">
+      <label for="address">Delivery Address</label>
+      <input type="text" id="address" name="address" placeholder="123 Market St">
+    </div>
+
+    <!-- Marketing Opt-in -->
+    <div class="form-group checkbox">
+      <input type="checkbox" id="newsletter" name="newsletter" unchecked>
+      <label for="newsletter">Subscribe to weekly deals & recipes</label>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="submit-btn">Register</button>
+  <button type="reset" class = reset-btn>Clear</button>
+    <p class="login-link">Already have an account? <a href="C:\Users\pc\Desktop\MASIPA ME  0109205685083 HTML L4\login.html">Log in</a></p>
+    <br>
+    <p>To start shopping, click here: </p> <br>
+    <a href="ProductIndex.html"> Start shopping</a>
+  </form>
+
+</div>
+</body>
+
+<footer>
+  <p>Footer &copy;2025</p>
+  <p> 
+    <h3>Footer for Sips Grocery Store </h3> 
+    <div>
+    <h3>Quick Links </h3>                   
+    <br>
+    <li><a href="index.html">HOME</a> <br>  </li>
+    <li> <a href=""> Shop Online</a> <br></li>
+    <li><a href="">Weekly Deals </a>  <br></li>
+    <li><a href="">Store Locations</a><br></li>
+  </p>
+
+
+  <h3>Follow Us</h3>
+  <a href="">[Facebook]</a> <a href="">[Instagram]</a> <br>
+  <a href="">[Twitter]</a>
+
+  <u><h3>Payment Methods </h3></u> 
+  <br>
+  <a href="https://bank.tymedigital.co.za/"><img src="tymebank.png" alt=""></a>
+  <img src="ned.png" alt=""><a href="https://secured.nedbank.co.za/#/login"></a>
+  <a href="https://www.fnb.co.za/?gclsrc=aw.ds&gad_source=1&gad_campaignid=11175189778&gbraid=0AAAAADcOygjZ7nmDkyvRBhRaqIkHsYBRb&gclid=Cj0KCQjwqebEBhD9ARIsAFZMbfxfawwhEkZ8-frfL90_xvSdJ1brm-76wMM6BcV_erDTDWxooKrl6D0aAtVMEALw_wcB"><img src="fnb.png" alt=""></a>
+ <a href="https://www.capitecbank.co.za/"> <img src="capitec.png" alt="" width="158"></a>
+  <a href="https://www.absa.co.za/personal/insure/my-funeral/explore/?cmpid=SGADS_IV28Y&gad_source=1&gad_campaignid=22453491038&gbraid=0AAAAACg7UV0nuKK-fGN8jZ0Tr3H2xlfYS&gclid=Cj0KCQjwqebEBhD9ARIsAFZMbfx6zfSdaTp3oc3oWjFfeWcbnqb6Gqw4lmRE3SFu7FRi89KNPTqAjesaAqGZEALw_wcB"><img src="absa.png" alt=""></a>
+
+  <br>
+  
+  Credits © 2024 *Sips Grocery Store*. All rights reserved. Proudly serving the community since 2018. 
+  </p>
+</footer>
+</html>

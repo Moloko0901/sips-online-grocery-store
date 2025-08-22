@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework Login</title>
+</head>
+<body>
+    <div class="login">
+        <h2>Login</h2>
+        <form onsubmit="return validateForm()">
+            <input type="text" id="username" name="Username" required><br>
+            <input type="password" id="password" name="Password" required><br>
+            <p id="error" class="error"></p>
+            <button type="submit">Login</button>
+
+            <br>
+            <a href="ProductIndex.html"> Access Store</a>
+
+        
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+          var username = document.getElementById('username')
+            var password = document.getElementById('password').value;
+            var error = document.getElementById('error');
+            
+            // Check password length
+            if (password.length <= 6) {
+                error.textContent = "Password must be >6 characters";
+                return false;
+            }
+            
+            if (password.length > 20) {
+                error.textContent = "Password must be ≤20 characters";
+                return false;
+            }
+            
+            if (password == "password" || password == "123456") {
+                error.textContent = "Password is too common";
+                return false;
+            }
+            
+            error.textContent = "";
+            alert("Login successful!");
+            return true;
+        }
+    </script>
+</body>
+</html>

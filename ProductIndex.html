@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sips Grocery Store - Catalog</title>
+    <link rel="stylesheet" href="productStylling.css">
+    
+    <style>
+        /* Basic styling if external CSS is missing */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem;
+        }
+        .category {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 2rem;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            margin: 0.5rem 0;
+        }
+        .product-card p {
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        input[type="number"] {
+            width: 80px;
+            padding: 5px;
+            margin: 0.5rem 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .payment-methods a {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sips Grocery Store</h1>
+        <p>Fresh products for your everyday needs</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#vegetables">Vegetables</a>
+        <a href="#fruits">Fruits</a>
+        <a href="#grains">Grains</a>
+        <a href="#meat">Meat</a>
+        <a href="#order">Place Order</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Our Catalog</h2>
+        <p>Click on the categories below to browse our fresh products:</p>
+        
+        <ul>
+            <li><a href="#vegetables">Vegetables Section</a></li>
+            <li><a href="#fruits">Fruits Section</a></li>
+            <li><a href="#grains">Grains Section</a></li>
+            <li><a href="#meat">Meat Section</a></li>
+        </ul>
+
+        <img src="download.jpeg" alt="Fresh Groceries" width="100%">
+    </section>
+
+    <section id="vegetables" class="category">
+        <h2>Vegetables</h2>
+        <h3>Primary Benefits</h3>
+        <p>Rich in vitamins, minerals, and fiber</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="cabbage.jpg" alt="Fresh Cabbage">
+                <h3>Cabbage</h3>
+                <p>R25.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="Carrot.webp" alt="Fresh Carrots">
+                <h3>Carrots</h3>
+                <p>R19.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="potatoes.jpg" alt="Fresh Potatoes">
+                <h3>Potatoes</h3>
+                <p>R15.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="Broccoli_3ct__19870.jpg" alt="Fresh Broccoli">
+                <h3>Broccoli</h3>
+                <p>R29.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="Spinach.jpg" alt="Fresh Spinach">
+                <h3>Spinach</h3>
+                <p>R22.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="red-and-white-onions.jpg" alt="Fresh Onions">
+                <h3>Onions</h3>
+                <p>R18.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="fruits" class="category">
+        <h2>Fruits</h2>
+        <h3>Primary Benefits</h3>
+        <p>Provide antioxidants, vitamins, and fiber</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="apples.webp" alt="Fresh Apples">
+                <h3>Apples</h3>
+                <p>R39.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="mangoes.jpg" alt="Fresh Mangoes">
+                <h3>Mangoes</h3>
+                <p>R30.00/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="oranges.jpg" alt="Fresh Oranges">
+                <h3>Oranges</h3>
+                <p>R35.00/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="different-berries-birdview-thumb-732x549.avif" alt="Assorted Berries">
+                <h3>Berries</h3>
+                <p>R43.00/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="42E9as7NaTaAi4A6JcuFwG.jpg" alt="Fresh Bananas">
+                <h3>Bananas</h3>
+                <p>R45.00/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="grains" class="category">
+        <h2>Grains & Breakfast</h2>
+        <p>Healthy grains and breakfast options for a nutritious start to your day</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="rice.jpeg" alt="Quality Rice">
+                <h3>Rice</h3>
+                <p>R45.99/5kg</p>
+                <input type="number" placeholder="Qty" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="OATS.webp" alt="Wholegrain Oats">
+                <h3>Oats</h3>
+                <p>R32.50/box</p>
+                <input type="number" placeholder="Qty" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="Rices Grains.webp" alt="Assorted Grains">
+                <h3>Mixed Grains</h3>
+                <p>R55.00/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="milo garins.png" alt="Milo Cereal">
+                <h3>Milo Cereal</h3>
+                <p>R38.99/box</p>
+                <input type="number" placeholder="Qty" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="Choco pops grain.png" alt="Choco Pops">
+                <h3>Choco Pops</h3>
+                <p>R42.50/box</p>
+                <input type="number" placeholder="Qty" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="bread.png" alt="Fresh Bread">
+                <h3>Bread</h3>
+                <p>R18.99/loaf</p>
+                <input type="number" placeholder="Qty" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="meat" class="category">
+        <h2>Meat</h2>
+        <p>Fresh, quality meat products</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Beef.jpg" alt="Beef">
+                <h3>Beef</h3>
+                <p>R129.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="chicken.jpg" alt="Chicken">
+                <h3>Chicken</h3>
+                <p>R79.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="ox liver.webp" alt="Ox Liver">
+                <h3>Ox Liver</h3>
+                <p>R65.99/kg</p>
+                <input type="number" placeholder="Qty (kg)" min="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="order">
+        <h2>Complete Your Order</h2>
+        <form id="orderForm">
+            <h3>Customer Information</h3>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <textarea id="address" placeholder="Delivery Address" required rows="3"></textarea>
+            
+            <h3>Order Summary</h3>
+            <textarea id="cartSummary" placeholder="Your cart will appear here" readonly rows="5"></textarea>
+            
+            <h3>Additional Notes</h3>
+            <textarea id="notes" placeholder="Special instructions or notes" rows="3"></textarea>
+            
+            <br>
+            <button type="submit">Place Order</button>
+            <button type="button" id="clearCart">Clear Cart</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Sips Grocery Store</h3>
+                <p>Fresh products delivered to your door</p>
+                <p>© 2025 Sips Grocery Store. All rights reserved.</p>
+            </div>
+            
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a><br>
+                <a href="#">Weekly Deals</a><br>
+                <a href="#">Store Locations</a><br>
+                <a href="#">Contact Us</a>
+            </div>
+            
+            <div>
+                <h3>Payment Methods</h3>
+                <div class="payment-methods">
+                    <a href="https://bank.tymedigital.co.za/"><img src="tymebank.png" alt="TymeBank" width="80"></a>
+                    <a href="https://secured.nedbank.co.za/#/login"><img src="ned.png" alt="Nedbank" width="80"></a>
+                    <a href="https://www.fnb.co.za/"><img src="fnb.png" alt="FNB" width="80"></a>
+                    <a href="https://www.capitecbank.co.za/"><img src="capitec.png" alt="Capitec" width="80"></a>
+                    <a href="https://www.absa.co.za/"><img src="absa.png" alt="Absa" width="80"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Cart functionality
+        const cart = [];
+        
+        // Add to cart buttons event listeners
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const productCard = this.parentElement;
+                const productName = productCard.querySelector('h3').textContent;
+                const productPrice = productCard.querySelector('p').textContent;
+                const quantityInput = productCard.querySelector('input[type="number"]');
+                const quantity = parseInt(quantityInput.value);
+                
+                // Validate quantity
+                if (isNaN(quantity) || quantity < 1) {
+                    alert(`Please enter a valid quantity for ${productName}`);
+                    return;
+                }
+                
+                // Check if product already in cart
+                const existingItemIndex = cart.findIndex(item => item.name === productName);
+                
+                if (existingItemIndex !== -1) {
+                    // Update quantity if product already in cart
+                    cart[existingItemIndex].quantity += quantity;
+                } else {
+                    // Add new product to cart
+                    cart.push({
+                        name: productName,
+                        price: productPrice,
+                        quantity: quantity
+                    });
+                }
+                
+                // Clear input field
+                quantityInput.value = '';
+                
+                // Update cart display
+                updateCartSummary();
+                
+                // Show confirmation
+                alert(`Added ${quantity} ${productName} to cart!`);
+            });
+        });
+        
+        // Update cart summary in the form
+        function updateCartSummary() {
+            const cartSummary = document.getElementById('cartSummary');
+            
+            if (cart.length === 0) {
+                cartSummary.value = 'Your cart is empty';
+                return;
+            }
+            
+            let summaryText = '';
+            let total = 0;
+            
+            cart.forEach(item => {
+                // Extract price value from text (e.g., "R39.99/kg" -> 39.99)
+                const priceValue = parseFloat(item.price.replace('R', '').replace('/kg', '').replace('/box', '').replace('/loaf', '').replace('/5kg', ''));
+                const itemTotal = priceValue * item.quantity;
+                total += itemTotal;
+                
+                summaryText += `${item.quantity} x ${item.name} - ${item.price} = R${itemTotal.toFixed(2)}\n`;
+            });
+            
+            summaryText += `\nTOTAL: R${total.toFixed(2)}`;
+            cartSummary.value = summaryText;
+        }
+        
+        // Form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate cart
+            if (cart.length === 0) {
+                alert('Your cart is empty. Please add some products before placing an order.');
+                return;
+            }
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const notes = document.getElementById('notes').value.trim();
+            
+            // Simple email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Simple phone validation
+            const phonePattern = /^[0-9+\s()-]{10,}$/;
+            if (!phonePattern.test(phone)) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+            
+            // Prepare order summary
+            let orderDetails = `ORDER CONFIRMATION\n\n`;
+            orderDetails += `Customer: ${name}\n`;
+            orderDetails += `Email: ${email}\n`;
+            orderDetails += `Phone: ${phone}\n`;
+            orderDetails += `Delivery Address: ${address}\n`;
+            
+            if (notes) {
+                orderDetails += `Notes: ${notes}\n`;
+            }
+            
+            orderDetails += `\nORDER ITEMS:\n`;
+            
+            let total = 0;
+            cart.forEach(item => {
+                const priceValue = parseFloat(item.price.replace('R', '').replace('/kg', '').replace('/box', '').replace('/loaf', '').replace('/5kg', ''));
+                const itemTotal = priceValue * item.quantity;
+                total += itemTotal;
+                
+                orderDetails += `${item.quantity} x ${item.name} @ ${item.price} = R${itemTotal.toFixed(2)}\n`;
+            });
+            
+            orderDetails += `\nTOTAL: R${total.toFixed(2)}`;
+            
+            // Show confirmation
+            alert(orderDetails);
+            
+            // Reset form and cart
+            this.reset();
+            cart.length = 0;
+            updateCartSummary();
+            
+            alert('Thank you for your order! We will contact you shortly to confirm delivery details.');
+        });
+        
+        // Clear cart button
+        document.getElementById('clearCart').addEventListener('click', function() {
+            if (cart.length === 0) {
+                alert('Your cart is already empty.');
+                return;
+            }
+            
+            if (confirm('Are you sure you want to clear your cart?')) {
+                cart.length = 0;
+                updateCartSummary();
+                alert('Your cart has been cleared.');
+            }
+        });
+        
+        // Initialize cart summary
+        updateCartSummary();
+    </script>
+</body>
+</html>
